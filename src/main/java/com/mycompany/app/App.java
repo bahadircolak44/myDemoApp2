@@ -1,6 +1,6 @@
 package com.mycompany.app;
 import static spark.Spark.*;
-import java.util.*;
+
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,23 +11,13 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e, String s,ArrayList<String> arr) {
+    public static boolean search(ArrayList<Integer> array, int e) {
       System.out.println("inside search");
       if (array == null) return false;
 
       for (int elt : array) {
-        if (elt == e) {
-            System.out.println("DENEME");
-            return true;
-        }
-      }  
-      
-    for (String str : arr) {
-        if(str.equal(s)) return true;
-      } 
-
-      
-      
+        if (elt == e) return true;
+      }
       return false;
     }
 

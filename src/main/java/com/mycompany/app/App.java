@@ -55,11 +55,11 @@ public class App
           java.util.ArrayList<String> inputList2 = new java.util.ArrayList<>();
           while (sc3.hasNext())
           {
-            String value = sc3.next().replaceAll("!!","");
+            String value = sc3.next().replaceAll("\\s","");
             inputList2.add(value);
           }
 
-          String input4 = req.queryParams("input4").replaceAll("!!","");
+          String input4 = req.queryParams("input4").replaceAll("\\s","");
 
           boolean result = App.search(inputList, input2AsInt,input4,inputList2);
 

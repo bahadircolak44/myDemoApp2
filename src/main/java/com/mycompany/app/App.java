@@ -1,7 +1,6 @@
 package com.mycompany.app;
 import static spark.Spark.*;
 
-import java.util.*;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,15 +11,12 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e, String s,ArrayList<String> arr) {
+    public static boolean search(ArrayList<Integer> array, int e) {
       System.out.println("inside search");
       if (array == null) return false;
 
       for (int elt : array) {
         if (elt == e) return true;
-      }
-    for (String str : arr) {
-        if (str.equals(s)) return true;
       }
       return false;
     }
@@ -49,19 +45,7 @@ public class App
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
 
-          String input3 = req.queryParams("input3");
-          java.util.Scanner sc3 = new java.util.Scanner(input3);
-          sc3.useDelimiter("[;\r\n]+");
-          java.util.ArrayList<String> inputList2 = new java.util.ArrayList<>();
-          while (sc3.hasNext())
-          {
-            String value = sc3.next().replaceAll("!!","");
-            inputList2.add(value);
-          }
-
-          String input4 = req.queryParams("input4").replaceAll("!!","");
-
-          boolean result = App.search(inputList, input2AsInt,input4,inputList2);
+          boolean result = App.search(inputList, input2AsInt);
 
          Map map = new HashMap();
           map.put("result", result);

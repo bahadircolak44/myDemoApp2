@@ -11,7 +11,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e) {
+    public static boolean search(ArrayList<Integer> array, int e, String s,ArrayList<String> arr) {
       System.out.println("inside search");
       if (array == null) return false;
 
@@ -19,9 +19,16 @@ public class App
         if (elt == e) {
             System.out.println("DENEME");
             return true;
-            
         }
+        
+        
+      for (String str : arr) {
+          
+        if(str.equal(s)) return true;
+        
       }
+      
+      
       return false;
     }
 

@@ -1,0 +1,3 @@
+Bahadir COLAK
+132101002
+BİL 481 HW-1

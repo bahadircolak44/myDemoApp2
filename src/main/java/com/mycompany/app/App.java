@@ -55,11 +55,11 @@ public class App
           java.util.ArrayList<String> inputList2 = new java.util.ArrayList<>();
           while (sc3.hasNext())
           {
-            String value = sc3.next().replaceAll("\\s","");
+            String value = sc3.next();
             inputList2.add(value);
           }
 
-          String input4 = req.queryParams("input4").replaceAll("\\s","");
+          String input4 = req.queryParams("input4");
 
           boolean result = App.search(inputList, input2AsInt,input4,inputList2);
 
@@ -86,4 +86,3 @@ public class App
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 }
-

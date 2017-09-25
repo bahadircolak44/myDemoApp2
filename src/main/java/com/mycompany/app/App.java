@@ -20,7 +20,7 @@ public class App
         if (elt == e) return true;
       }
     for (String str : arr) {
-        if (str.equal(s)) return true;
+        if (str.equals(s)) return true;
       }
       return false;
     }
@@ -49,7 +49,19 @@ public class App
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
 
-          boolean result = App.search(inputList, input2AsInt);
+          String input3 = req.queryParams("input3");
+          java.util.Scanner sc3 = new java.util.Scanner(input3);
+          sc3.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<String> inputList2 = new java.util.ArrayList<>();
+          while (sc3.hasNext())
+          {
+            String value = sc3.next().replaceAll("\\s","");
+            inputList2.add(value);
+          }
+
+          String input4 = req.queryParams("input4").replaceAll("\\s","");
+
+          boolean result = App.search(inputList, input2AsInt,input4,inputList2);
 
          Map map = new HashMap();
           map.put("result", result);

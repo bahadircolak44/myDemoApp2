@@ -1,5 +1,4 @@
 package com.mycompany.app;
-
 import static spark.Spark.*;
 
 import java.util.HashMap;
@@ -17,7 +16,11 @@ public class App
       if (array == null) return false;
 
       for (int elt : array) {
-        if (elt == e) return true;
+        if (elt == e) {
+            System.out.println("DENEME");
+            return true;
+            
+        }
       }
       return false;
     }

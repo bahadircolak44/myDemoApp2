@@ -21,10 +21,9 @@ public class App
             return true;
         }
       }  
+      
     for (String str : arr) {
-          
         if(str.equal(s)) return true;
-        
       } 
 
       

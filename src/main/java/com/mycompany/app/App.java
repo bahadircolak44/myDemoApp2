@@ -20,13 +20,13 @@ public class App
             System.out.println("DENEME");
             return true;
         }
-        
-        
-      for (String str : arr) {
+      }  
+    for (String str : arr) {
           
         if(str.equal(s)) return true;
         
-      }
+      } 
+
       
       
       return false;
